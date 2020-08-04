@@ -12,8 +12,13 @@ class MailRuLogin {
     void Login () {
         Configuration.holdBrowserOpen = true;
 
+        // Open Mail.ru
         open("https://mail.ru/");
+
+        // Insert user's login
         $(byName("login")).setValue("Mail").pressEnter();
+
+        // Insert user's password
         $(byName("password")).setValue("Password").pressEnter();
     }
 }
