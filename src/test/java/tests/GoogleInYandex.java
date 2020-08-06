@@ -20,6 +20,8 @@ class GoogleInYandex {
         $(byName("text")).setValue("Google").pressEnter();
 
         // Open Google
-        $("#search-result .serp-item a[href='https://www.google.ru/']").click();
+        $("#search-result a[href='https://www.google.ru/']").click();
+        
+        $(byName("q")).shouldBe(visible, enabled));
     }
 }
