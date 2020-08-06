@@ -16,14 +16,19 @@ class AmazonCart {
 
         //Find Kindle products
         $(byName("field-keywords")).setValue("Kindle").pressEnter();
-
         //  Open Fire 7 Tablet page
         $(byPartialLinkText("Fire 7 Tablet")).click();
-
         // Tap on Add to Shopping Cart button
-        $(byTitle("Add to Shopping Cart")).click();
-
+        $("#add-to-cart-button").click();
         // Tap Continue button
-        $(byId("a-autoid-32")).click();
+        // $(byId("a-autoid-32")).click();
+        // $("#a-autoid-32").click();
+        $(".abb-intl-continue").click();
+        
+        $("#huc-v2-order-row-with-divider").shouldHave(text("Added to Cart"));
+
+        $(".hlb-view-cart-announce").click(); // click Cart
+        
+        $("#sc-active-cart").shouldHave(text("Fire 7 Tablet"));
     }
 }
